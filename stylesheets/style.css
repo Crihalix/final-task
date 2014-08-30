@@ -102,7 +102,7 @@ h1{
 	content:'';
 	position:absolute;
 	top:0;
-	left:0;
+	left:-2px;
 	width:5px;
 	height:100%;
 	background-color:#e9e9e9;
@@ -115,28 +115,23 @@ h1{
 
 
 
-
-
-
-
 /*content*/
 .content{
 	height:599px;
 	position:relative;
 	z-index:1;
 }
-
 .tab-item-cnt{
 	display:none;
-	opacity:0;
+	/*opacity:0;
 	-webkit-transition:opacity 400ms ease;
 	-moz-transition:opacity 400ms ease;
 	-ms-transition:opacity 400ms ease;
-	transition:opacity 400ms ease;
+	transition:opacity 400ms ease;*/
 }
 .tab-item-cnt.active{
 	display:block;
-	opacity:1;
+	/*opacity:1;*/
 }
 /*grafic-cnt*/
 .grafic-cnt h1{
@@ -694,8 +689,9 @@ input[type="text"]{
 	margin:30px 0 0;
 	float:left;
 }
-.discript-left-cup{
+.discript-left-cup,.discript-right-cup{
 	margin:0 0 5px;
+	cursor:pointer;
 }
 .discript-cups figure{
 	width:21px;
@@ -717,27 +713,11 @@ input[type="text"]{
 }
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 .progress_bar_first{
-  animation: progress_bar_first 1.5s ease-out forwards;
-  -moz-animation: progress_bar_first 1.5s ease-out forwards;
-  -webkit-animation: progress_bar_first 1.5s ease-out forwards;
-  -ms-animation: progress_bar_first 1.5s ease-out forwards;
+  animation: 1.5s progress_bar_first 0.5s ease-out forwards;
+  -moz-animation: 1.5s progress_bar_first 0.5s ease-out forwards;
+  -webkit-animation: 1.5s progress_bar_first 0.5s ease-out forwards;
+  -ms-animation: 1.5s progress_bar_first 0.5s ease-out forwards;
 }
 @-webkit-keyframes progress_bar_first {
   from {
@@ -772,10 +752,10 @@ input[type="text"]{
   }
 }
 .progress_bar_second{
-  animation: progress_bar_second 1.5s ease-out forwards;
-  -moz-animation: progress_bar_second 1.5s ease-out forwards;
-  -webkit-animation: progress_bar_second 1.5s ease-out forwards;
-  -ms-animation: progress_bar_second 1.5s ease-out forwards;
+  animation: 1.5s progress_bar_second 0.5s ease-out forwards;
+  -moz-animation: 1.5s progress_bar_second 0.5s ease-out forwards;
+  -webkit-animation: 1.5s progress_bar_second 0.5s ease-out forwards;
+  -ms-animation: 1.5s progress_bar_second 0.5s ease-out forwards;
 }
 @-webkit-keyframes progress_bar_second {
   from {
@@ -812,10 +792,10 @@ input[type="text"]{
 
 
 .fade_in_bar_text{
-  animation: fade_in_bar_text 700ms ease-out 1.5s forwards;
-  -moz-animation: fade_in_bar_text 700ms ease-out 1.5s forwards;
-  -webkit-animation: fade_in_bar_text 700ms ease-out 1.5s forwards;
-  -ms-animation: fade_in_bar_text 700ms ease-out 1.5s forwards;
+  animation: fade_in_bar_text 700ms ease-out 2s forwards;
+  -moz-animation: fade_in_bar_text 700ms ease-out 2s forwards;
+  -webkit-animation: fade_in_bar_text 700ms ease-out 2s forwards;
+  -ms-animation: fade_in_bar_text 700ms ease-out 2s forwards;
 }
 @-webkit-keyframes fade_in_bar_text {
   from {
@@ -853,21 +833,6 @@ input[type="text"]{
 	visibility:visible;
   }
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 
