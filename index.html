@@ -3,7 +3,6 @@
 <head>
 	<meta charset="utf-8">
 	<title></title>
-	
 	<link type="text/css" rel="stylesheet" href="stylesheets/style.css"/>
 </head>
 <body>
@@ -66,9 +65,9 @@
 				<div class="col-left">
 					<div class="enter-number">
 						<div class="headline-ent-num">
-							<input type="text" placeholder="Enter number of DVT patients here">
+							<input type="text" placeholder="Enter number of DVT patients here" data-bind="value: yourNumber">
 							<input type="button" value="CALCULATE">
-							<input type="button" value="?" class="question">
+							<input type="button" value="?" class="question" data-bind="click: showResult">
 						</div>
 						<p class="enter-number-text">Assumptions to estimate calculations: proportion of patients whit DVT contraindicated for Xarelto or LMWH/VKA<sup>1,2</sup> =7.5%<br>
 						<b>Number of patients with DVT - 7.5% = <span>[A]</span></b> Total number of DVT patients eligible for dual LMWH/VKA or Xarelto</p>
@@ -76,7 +75,7 @@
 					<div class="item-select-calc">
 						<div class="headline">
 							<p>Injections avoided<sup>3-7</sup></p>
-							<input type="text" value="[B + C]">
+							<input type="text" value="[B + C]" data-bind="value: resultAandB_DVT">
 						</div>
 						<div class="item-select-text">
 							<input type="button" value="+" class="open">
@@ -86,7 +85,7 @@
 					<div class="item-select-calc">
 						<div class="headline">
 							<p>INR clinic visits avoided <sup>3,7,8</sup></p>
-							<input type="text" value="[E]">
+							<input type="text" value="[E]" data-bind="value: resultE">
 						</div>
 						<div class="item-select-text">
 							<input type="button" value="+" class="open">
@@ -96,7 +95,7 @@
 					<div class="item-select-calc">
 						<div class="headline">
 							<p>Nurse visits avoided<sup>9</sup></p>
-							<input type="text" value="[G]">
+							<input type="text" value="[G]" data-bind="value: resultG">
 						</div>
 						<div class="item-select-text">
 							<input type="button" value="+" class="open">
@@ -106,7 +105,7 @@
 					<div class="item-select-calc">
 						<div class="headline">
 							<p>Hospital bed days saved<sup>10</sup></p>
-							<input type="text" value="[H]">
+							<input type="text" value="[H]" data-bind="value: resultH">
 						</div>
 						<div class="item-select-text">
 							<input type="button" value="+" class="open">
@@ -231,14 +230,16 @@
 			bleeding, which may include the presence of malignant neoplasms at high risk of bleeding.<br>
 			<sup>b</sup>Outcome: symptomatic, recurrent VTE.
 		</p>
-		<div class="swipe-panel">
-			<div class="swipe" id="swipe"></div>
+		<div class="swipe-panel" id="swipe">
+			<div class="swipe"></div>
 		</div>
 	</footer>
 </div>
 
 
 <script type="text/javascript" src="scripts/final_task.js"></script>
+<script type="text/javascript" src="scripts/knockout-3.2.0.js"></script>
+<script type="text/javascript" src="scripts/calculate.js"></script>
 
 
 
