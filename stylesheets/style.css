@@ -516,16 +516,16 @@ input[type="text"]{
 	transform-origin:50% 50%;
 }
 .cups-block.outweighed-left:after{
-	-webkit-transform:rotate(5deg);
-	-moz-transform:rotate(5deg);
-	-ms-transform:rotate(5deg);
-	transform:rotate(5deg);
-}
-.cups-block.outweighed-right:after{
 	-webkit-transform:rotate(-5deg);
 	-moz-transform:rotate(-5deg);
 	-ms-transform:rotate(-5deg);
 	transform:rotate(-5deg);
+}
+.cups-block.outweighed-right:after{
+	-webkit-transform:rotate(5deg);
+	-moz-transform:rotate(5deg);
+	-ms-transform:rotate(5deg);
+	transform:rotate(5deg);
 }
 .cup{
 	position:absolute;
@@ -534,16 +534,16 @@ input[type="text"]{
 	width:146px;
 	height:55px;
 }
-.outweighed-left .cup.left{
+.outweighed-right .cup.left{
 	top:147px;
 }
-.outweighed-left .cup.right{
-	top:165px;
-}
-.outweighed-right .cup.left{
-	top:165px;
-}
 .outweighed-right .cup.right{
+	top:165px;
+}
+.outweighed-left .cup.left{
+	top:165px;
+}
+.outweighed-left .cup.right{
 	top:147px;
 }
 .cup:before,.cup:after{
