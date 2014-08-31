@@ -65,7 +65,7 @@
 				<div class="col-left">
 					<div class="enter-number">
 						<div class="headline-ent-num">
-							<input type="text" placeholder="Enter number of DVT patients here" data-bind="value: yourNumber">
+							<input type="text" placeholder="Enter number of DVT patients here" data-bind="value: yourDVTNumber">
 							<input type="button" value="CALCULATE">
 							<input type="button" value="?" class="question" data-bind="click: showResult">
 						</div>
@@ -75,7 +75,7 @@
 					<div class="item-select-calc">
 						<div class="headline">
 							<p>Injections avoided<sup>3-7</sup></p>
-							<input type="text" value="[B + C]" data-bind="value: resultAandB_DVT">
+							<input type="text" value="[B + C]" data-bind="value: resultBandC_DVT">
 						</div>
 						<div class="item-select-text">
 							<input type="button" value="+" class="open">
@@ -85,7 +85,7 @@
 					<div class="item-select-calc">
 						<div class="headline">
 							<p>INR clinic visits avoided <sup>3,7,8</sup></p>
-							<input type="text" value="[E]" data-bind="value: resultE">
+							<input type="text" value="[E]" data-bind="value: resultE_DVT">
 						</div>
 						<div class="item-select-text">
 							<input type="button" value="+" class="open">
@@ -95,7 +95,7 @@
 					<div class="item-select-calc">
 						<div class="headline">
 							<p>Nurse visits avoided<sup>9</sup></p>
-							<input type="text" value="[G]" data-bind="value: resultG">
+							<input type="text" value="[G]" data-bind="value: resultG_DVT">
 						</div>
 						<div class="item-select-text">
 							<input type="button" value="+" class="open">
@@ -105,7 +105,7 @@
 					<div class="item-select-calc">
 						<div class="headline">
 							<p>Hospital bed days saved<sup>10</sup></p>
-							<input type="text" value="[H]" data-bind="value: resultH">
+							<input type="text" value="[H]" data-bind="value: resultH_DVT">
 						</div>
 						<div class="item-select-text">
 							<input type="button" value="+" class="open">
@@ -116,7 +116,7 @@
 				<div class="col-right">
 					<div class="enter-number">
 						<div class="headline-ent-num">
-							<input type="text" placeholder="Enter number of patients with EP here">
+							<input type="text" placeholder="Enter number of patients with EP here" data-bind="value: yourEPNumber">
 							<input type="button" value="CALCULATE">
 							<input type="button" value="?" class="question">
 						</div>
@@ -126,7 +126,7 @@
 					<div class="item-select-calc">
 						<div class="headline">
 							<p>Injections avoided<sup>3-6,11</sup></p>
-							<input type="text" value="[B + C]">
+							<input type="text" value="[B + C]" data-bind="value: resultBandC_EP">
 						</div>
 						<div class="item-select-text">
 							<input type="button" value="+" class="open">
@@ -136,7 +136,7 @@
 					<div class="item-select-calc">
 						<div class="headline">
 							<p>INR clinic visits avoided <sup>3,8,11</sup></p>
-							<input type="text" value="[I]">
+							<input type="text" value="[I]" data-bind="value: resultI_EP">
 						</div>
 						<div class="item-select-text">
 							<input type="button" value="+" class="open">
@@ -146,7 +146,7 @@
 					<div class="item-select-calc">
 						<div class="headline">
 							<p>Hospital bed days saved<sup>10</sup></p>
-							<input type="text" value="[J]">
+							<input type="text" value="[J]" data-bind="value: resultJ_EP">
 						</div>
 						<div class="item-select-text">
 							<input type="button" value="+" class="open">
@@ -158,19 +158,19 @@
 					<p class="headline">Combined DVT + PE Resour Saved</p>
 					<div class="item-discript-calc">
 						<p>Injections avoided <sup>3-7,11</sup></p>
-						<p class="formula">[DVT+PE]</p>
+						<p class="formula" data-bind="text: DVTplusPE_BC">[DVT+PE]</p>
 					</div>
 					<div class="item-discript-calc">
 						<p>INR clinic visits avoided<sup>3,7,8,11</sup></p>
-						<p class="formula">[DVT+PE]</p>
+						<p class="formula" data-bind="text: DVTplusPE_EaI">[DVT+PE]</p>
 					</div>
 					<div class="item-discript-calc">
 						<p>Nurse visit avoided<sup>9</sup></p>
-						<p class="formula">[DVT]</p>
+						<p class="formula" data-bind="text: DVT_G">[DVT]</p>
 					</div>
 					<div class="item-discript-calc">
 						<p>Hospital bed days saved<sup>10</sup></p>
-						<p class="formula">[DVT+PE]</p>
+						<p class="formula" data-bind="text: DVTplusPE_HaJ">[DVT+PE]</p>
 					</div>
 				</div>
 			</div>
